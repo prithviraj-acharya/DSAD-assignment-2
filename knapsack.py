@@ -1,11 +1,19 @@
 class KnapSack:
     def __init__(self, weights, profit, capacity):
+
+        if len(weights) != len(profit):
+            raise ValueError("Weights and profit lists must have the same length.")
+        if capacity < 0:
+            raise ValueError("Capacity must be a non-negative number.")
+        if not weights or not profit:
+            raise ValueError("Weights and profit lists must not be empty.")
+
         self.weights = weights
         self.profit = profit
         self.capacity = capacity
         self.n = len(weights)
         self.ratio = [round(profit[i] / weights[i], 2) for i in range(self.n)]
-        self.returned_indices = []
+        self.returned_indices = set()
 
     def find_max_idx(self):
         max_val = float("-inf")
@@ -19,7 +27,7 @@ class KnapSack:
                     max_val = self.ratio[i]
                     max_index = i
         if max_index != -1:
-            self.returned_indices.append(max_index)
+            self.returned_indices.add(max_index)
         return max_index
 
     def find_max_profit(self):
