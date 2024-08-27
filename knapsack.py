@@ -48,7 +48,7 @@ class KnapSack:
                 max_profit += (self.capacity - initial_capacity) * self.ratio[idx]
                 break
 
-        return items, max_profit
+        return items, round(max_profit, 2)
 
 
 if __name__ == "__main__":
