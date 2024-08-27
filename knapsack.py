@@ -39,7 +39,7 @@ class KnapSack:
             if idx == -1:
                 break
 
-            items.append(idx + 1)
+            items.append(f"R{idx + 1}")
 
             if self.weights[idx] + initial_capacity <= self.capacity:
                 initial_capacity += self.weights[idx]
