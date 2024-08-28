@@ -1,0 +1,13 @@
+Number of regions (n): 10
+Maximum Acres of land to sell (x): 16
+R1 / 3 / 80
+R2 / 2 / 30
+R3 / 4 / 20
+R4 / 1 / 40
+R5 / 5 / 120
+R6 / 4 / 60
+R7 / 6 / 100
+R8 / 3 / 60
+R9 / 2 / 30
+R10 / 2 / 50
+
