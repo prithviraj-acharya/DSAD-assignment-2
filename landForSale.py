@@ -51,20 +51,20 @@ class KnapSack:
         return items, round(max_profit, 2)
 
 def read_input_file(INPUT_FILE):
-        acres_of_land = []
-        profit = []
-        with open(INPUT_FILE, 'r') as file:
-            lines = file.readlines()
-        x_line = lines[1].strip()
-        max_acres = int(x_line.split(':')[1].strip())
-        for line in lines[2:]:
-            parts = line.strip().split('/')
-            if len(parts) == 3:
-                acres = int(parts[1].strip())
-                value = int(parts[2].strip())
-                acres_of_land.append(acres)
-                profit.append(value)
-        return acres_of_land, profit, max_acres
+    acres_of_land = []
+    profit = []
+    with open(INPUT_FILE, 'r') as file:
+        lines = file.readlines()
+    x_line = lines[1].strip()
+    max_acres = int(x_line.split(':')[1].strip())
+    for line in lines[2:]:
+        parts = line.strip().split('/')
+        if len(parts) == 3:
+            acres = int(parts[1].strip())
+            value = int(parts[2].strip())
+            acres_of_land.append(acres)
+            profit.append(value)
+    return acres_of_land, profit, max_acres
 
 def write_output_file(OUTPUT_FILE, items, max_profit):
     with open(OUTPUT_FILE, 'w') as file:
