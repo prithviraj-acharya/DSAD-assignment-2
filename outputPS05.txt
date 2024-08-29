@@ -1,2 +1,2 @@
-The regions that to are be selected is: R4, R1, R10, R5, R8, R7, 
+The regions that to be selected is: R4, R1, R10, R5, R8, R7
 Total profit value: 383.34
