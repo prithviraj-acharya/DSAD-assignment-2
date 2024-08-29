@@ -14,6 +14,8 @@ class KnapSack:
             raise ValueError("Capacity must be a non-negative number.")
         if not self.acres or not self.profit:
             raise ValueError("acres and profit lists must not be empty.")
+        if any(acres < 0 for acres in self.acres):
+            raise ValueError("acres values must be non-negative.")
 
     def find_max_idx(self):
         """Find the index of the item with the maximum profit-to-acre ratio."""
