@@ -58,9 +58,9 @@ class KnapSack:
         try:
             with open(input_file, "r") as file:
                 lines = file.readlines()
-            x_line = lines[1].strip()
-            max_acres = int(x_line.split(":")[1].strip())
-            for line in lines[2:]:
+            n = int(lines[0].strip().split(":")[1].strip())
+            max_acres = int(lines[1].strip().split(":")[1].strip())
+            for line in lines[2 : 2 + n]:
                 parts = line.strip().split("/")
                 if len(parts) == 3:
                     acres = int(parts[1].strip())
